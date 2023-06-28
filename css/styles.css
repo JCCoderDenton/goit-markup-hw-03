@@ -2,19 +2,19 @@
 body{
     font-family: 'Roboto', sans-serif;
     color: var(--black-color);
-    margin: 0;
-    padding: 0;
-    border: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 :root{
- --main-color: rgba(33, 150, 243, 1);
- --white-color: #ffffff;
- --black-color: #000000;
- --black-grey-color: #212121;
- --white-grey-color: #757575;
- --white-bg-color: #F5F4FA;
- --black-bg-color: #2F303A;
- --active-button-color: #005ca7;
+    --main-color: rgba(33, 150, 243, 1);
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --black-grey-color: #212121;
+    --white-grey-color: #757575;
+    --white-bg-color: #F5F4FA;
+    --black-bg-color: #2F303A;
+    --active-button-color: #005ca7;
 }
 h2{ 
     font-weight: 700;
@@ -22,33 +22,47 @@ h2{
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--grey-color)
+    color: var(--grey-color);
+    padding: 0;
+    margin: 0 0 50px 0;
 }
 
 .container{
     width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.flex-inline{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+.flex-column{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.flex-list-warp{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
 .section{
-    padding:94px 0 94px 0;
+    padding: 94px 0;
 }
 
 /*  Header   */
 .upper-line{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    margin: 0;
     background: var(--white-color);
-    box-shadow: 0px 1px 3px rgba(90, 77, 77, 0.12), 0px 1px 1px #ECECEC;;
-    border-radius: 0px 0px 4px 4px;
-    
 }
 .upper-button{
     font-family: 'Raleway';
-    margin-right: 93px;
+    padding: 23px 0;
+    margin-right: 0;
     font-size: 26px;
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -61,41 +75,48 @@ h2{
 }
 
 .upper-nav{
-    font-weight: 500;
+    display: flex;
+    padding: 0;
+    margin: 0;
     font-weight: 500;
     font-size: 14px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02em;    
 }
 .upper-nav li
 {
-    display: flex;
-    display: inline-block;
-    margin-right: 50px;
+    display: flex;/*При видаленні "display: flex" не зникає крапки перед лі*/
+    margin: 0 50px 0 0;
+}
+.upper-nav li:last-child
+{
+    margin: 0 170px 0 0;
 }
 .upper-nav li a
 {
     text-decoration: none;
+    padding: 32px 0;
     color: var(--black-color);
 }
 .upper-nav li a:hover
 {
     color: var(--main-color);
 }
-.upper-nav li:last-child a
-{
-    margin-right: 159px;
-}
 .upper-contact
 {
+    padding: 0;
+    margin: 0;
     font-weight: 500;
+    display: flex;
+    text-decoration: none;
 }
 .upper-contact li
 {
-    display: inline-block;
+    display: flex;
     margin-left: 50px;
 }
 .upper-contact li a
 {
+    padding: 32px 0;
     text-decoration: none;
     color: rgba(117, 117, 117, 1);
 }
@@ -111,17 +132,18 @@ h2{
 .bottom-line{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 252px;
+    margin: 0;
+    padding: 60px 0;
     background: var(--black-bg-color);
 }
 .bottom-button{
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
     letter-spacing: 0.02em;
-    color:  var(--white-color);
+    color: var(--white-color);
 }
 .bottom-button:before {
     content: 'Web';
@@ -140,8 +162,15 @@ h2{
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    list-style-type: none; 
     padding-bottom: 9px;
+    margin: 0;
+    padding: 0;
+}
+.bottom-contact li:not(:last-child){
+    margin: 0 0 12px 0;
+}
+.bottom-contact li:first-child{
+    margin: 0 0 28px 0;
 }
 .bottom-contact-colour-white{
     color: rgb(255, 255, 255);
@@ -155,35 +184,34 @@ h2{
 /*     index.html      */
 
 .center{
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
+    padding: 200px 0;
     background: var(--black-bg-color);
-    text-align: center;  
-    margin-top: -30px;
 }
 .center-title{
+    padding: 0 0 30px 0;
+    margin: 0;
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-    white-space: pre;
-    padding-top: 200px;
     letter-spacing: 0.06em;
+    text-align: center;
     text-transform: uppercase;
-    color:  var(--white-color);
+    color: var(--white-color);
 }
 .center-button{
-    position: relative;
+    padding: 0;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.06em;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    color:  var(--white-color);
+    color: var(--white-color);
     width: 216px;
     height: 50px;
-    margin-bottom: 200px;
     background: var(--main-color);
     border-radius: 4px;
     cursor: pointer;
@@ -193,21 +221,24 @@ h2{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color:  var(--white-color);
 }
-.content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
+.content h2{
+    display: none;
 }
 .content-list{
-    align-items: start;
+    display: flex;
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
-.content-list li:not(:last-child){
-    margin-right: 30px;
+.content-list li{
+    width: 270px;
+}
+.content-list li:not(:first-child){
+    margin-left: auto;
 }
 .content-list li h3{
+    padding: 0;
+    margin: 0 0 10px 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 1;
@@ -215,6 +246,8 @@ h2{
     color: var(--grey-color)
 }
 .content-list li p{
+    padding: 0;
+    margin: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.8;
@@ -223,15 +256,11 @@ h2{
 }
 
 .pictures-work{
-    display: flex;
     justify-content: center;
-    margin: 0;
 }
 .pictures-work-list{
+    display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-
 }
 .pictures-work-list li:not(:last-child){
     margin-right: auto;
@@ -239,13 +268,9 @@ h2{
 .section-workers{
     background: var(--white-bg-color);
 }
-.workers{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-}
+
 .workers-list{
+    display: flex;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -253,9 +278,9 @@ h2{
 
 .workers-list li{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 270px;
     border-radius: 0px 0px 4px 4px;
     background:  var(--white-color);
-    display: inline-block;
     text-align: center;
 }
 .workers-list li:not(:last-child){
@@ -266,33 +291,36 @@ h2{
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.48px; 
+    padding: 0;
+    margin: 30px 0 10px 0;
 }
 .workers-list li p{
     color: var(--white-grey-color);
     font-size: 16px;
-    letter-spacing: 0.48px 
+    letter-spacing: 0.48px; 
+    padding: 0;
+    margin: 0 0 30px 0;
 }
 
 /*       portpolio.html          */
 
 
 .main-buttons{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 0 0 50px 0;
-}
-.content-list{
+    margin: 0;
     list-style-type: none;
 }
-.main-buttons li{
-    width: auto; 
-    display: inline-block;
+.main-buttons li:not(:last-child){
+    margin: 0 8px 0 0;
 }
 .main-buttons li button{
     font-family: 'Roboto', sans-serif; 
     width: auto;
     height: 38px;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 22px;
+    padding-left: 22px;
     background: var(--white-bg-color);
     border-radius: 4px;
     cursor: pointer;
@@ -325,29 +353,32 @@ h2{
     margin: 0;
 }
 .main-pic-list li{
-    display: inline-block;
     border-radius: 0px 0px 4px 4px;
+    width: 370px;
     background:  var(--white-color);
-    margin-right: 25px;
-    margin-bottom: 25px;
-}
 
+    margin-bottom:30px;
+}
+.main-pic-list li{
+    margin: 0 0 0 0;
+}
+.main-pic-list li:not(:nth-child(3n)){
+    margin: 0 auto 0 0;
+}
 .main-pic-list li a div{
     text-align: left;
-    margin: 24px; 
+    margin: 24px 20px; 
 }
 .main-pic-list li a div h3{
     font-family: 'Roboto', sans-serif;
     color: var(--black-grey-color);
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: 1.08px; 
 }
 .main-pic-list li a div p{
     font-family: 'Roboto', sans-serif;
     color: var(--white-grey-color);
     font-size: 16px;
-    letter-spacing: 0.48px; 
 }
 .main-pic-list li a{
     font-family: 'Roboto', sans-serif;
